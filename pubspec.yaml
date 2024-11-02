@@ -31,7 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  flutter_appylar: ^1.0.3
+  flutter_appylar: ^1.0.5
     # When depending on this package from a real application you should use:
     #   flutter_appylar_sdk: ^x.y.z
     # See https://dart.dev/tools/pub/dependencies#version-constraints
