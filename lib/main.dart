@@ -80,9 +80,9 @@ class _MyAppState extends State<MyApp> {
     try {
       var appKey = "";
       if (Platform.isAndroid) {
-        appKey = "oq8KqmAv7CmWST23FS12-g";
+        appKey = "<YOUR_ANDROID_APP_KEY>";
       }else{
-        appKey = "knZidxcpufCJLTfwJbbm4w";
+        appKey = "YOUR_IOS_APP_KEY";
       }
       bool testMode = false;
       Appylar.initialize(appKey,[AdType.banner,AdType.interstitial],testMode);
