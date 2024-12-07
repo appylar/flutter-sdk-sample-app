@@ -1,16 +1,7 @@
-# flutter_appylar_sample_app
+# The Appylar Flutter SDK sample app
 
-A new Flutter project.
+This app contains a simple implementation of the Appylar Flutter SDK. Before you start the app, add a valid app key from an app registered on your Appylar account in the initialization function.
 
-## Getting Started
+Please read the full documentation of the SDK on our [website](https://www.appylar.com/).
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+If you have any questions or suggestions regarding the SDK, please contact us at [support@appylar.com](mailto:support@appylar.com).
