@@ -82,11 +82,10 @@ class _MyAppState extends State<MyApp> {
       if (Platform.isAndroid) {
         appKey = "<YOUR_ANDROID_APP_KEY>";
       }else{
-        appKey = "YOUR_IOS_APP_KEY";
+        appKey = "<YOUR_IOS_APP_KEY>";
       }
       bool testMode = false;
       Appylar.initialize(appKey,[AdType.banner,AdType.interstitial],testMode);
-      setParameters();
     } on PlatformException {
 
     }
@@ -109,17 +108,12 @@ class _MyAppState extends State<MyApp> {
     Appylar.showAd();
   }
 
-  void setParameters() {
-    Map<String, List<String>> parameters = {'banner_height': ['90']};
-    Appylar.setParameters(parameters);
-  }
-
   Future<void> initPlatformState() async {
     if (!mounted) return;
     setState(() {});
   }
 
-  @override
+ @override
  Widget build(BuildContext context) {
   return MaterialApp(
     title: 'Title',
@@ -128,6 +122,7 @@ class _MyAppState extends State<MyApp> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          Spacer(),
           Center(
             child: TextButton(
               onPressed: () {
@@ -154,20 +149,13 @@ class _MyAppState extends State<MyApp> {
               child: Text("SHOW INTERSTITIAL"),
             ),
           ),
-          SizedBox(width: 100),
-          Center(
-            child: TextButton(
-              onPressed: () {
-                setParameters();
-              },
-              child: Text("SET PARAMETERS"),
-            ),
-          ),
+          Spacer(),
           Center(
             child: AppylarBannerView(
               onAppylarBannerViewCreated: _onAppylarBannerViewCreated,
             ),
-          )
+          ),
+          SizedBox(height: 100),
         ],
       ),
     ),
