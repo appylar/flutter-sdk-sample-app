@@ -3,7 +3,7 @@
         android:label="flutter_appylar_sample_app"
         tools:replace="android:name"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/appylar_logo">
         <activity
             android:name=".MainActivity"
             android:exported="true"
