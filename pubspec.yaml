@@ -102,4 +102,3 @@ flutter_native_splash:
   ios: true
   android_gravity: center # Adjusts image position
   ios_content_mode: center # Adjusts image position
-  #image_size: 100 # Set the image size in logical pixels
