@@ -31,6 +31,8 @@ dependencies:
   flutter:
     sdk: flutter
 
+  flutter_native_splash: ^2.2.19
+
   flutter_appylar:
     ^1.0.7
     # See https://dart.dev/tools/pub/dependencies#version-constraints
@@ -63,8 +65,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/appylar_logo.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -92,3 +94,12 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+flutter_native_splash:
+  color: "#ffffff" # Background color
+  image: assets/appylar_logo.png # Path to your splash image
+  android: true
+  ios: true
+  android_gravity: center # Adjusts image position
+  ios_content_mode: center # Adjusts image position
+  #image_size: 100 # Set the image size in logical pixels

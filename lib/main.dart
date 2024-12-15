@@ -122,13 +122,26 @@ class _MyAppState extends State<MyApp> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+
           Spacer(),
+          Center(
+            child:
+              Image.asset('./assets/appylar_logo.png',
+              height: 70,
+            ),
+          ),
+
+         SizedBox(height: 30),
+          Text("Appylar Sample App", 
+           style: TextStyle(fontSize: 22)),
+           
           Center(
             child: TextButton(
               onPressed: () {
                 showBanner();
               },
-              child: Text("SHOW BANNER"),
+              child: Text("SHOW BANNER",
+               style: TextStyle(color: Colors.blue)),
             ),
           ),
           SizedBox(width: 100),
@@ -137,7 +150,8 @@ class _MyAppState extends State<MyApp> {
               onPressed: () {
                 hideBanner();
               },
-              child: Text("HIDE BANNER"),
+              child: Text("HIDE BANNER",
+               style: TextStyle(color: Colors.blue)),
             ),
           ),
           SizedBox(width: 100),
@@ -146,7 +160,8 @@ class _MyAppState extends State<MyApp> {
               onPressed: () {
                 showInterstitial();
               },
-              child: Text("SHOW INTERSTITIAL"),
+              child: Text("SHOW INTERSTITIAL",
+               style: TextStyle(color: Colors.blue)),
             ),
           ),
           Spacer(),
