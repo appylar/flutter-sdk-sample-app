@@ -84,7 +84,7 @@ class _MyAppState extends State<MyApp> {
       }else{
         appKey = "<YOUR_IOS_APP_KEY>";
       }
-      bool testMode = false;
+      bool testMode = true;
       Appylar.initialize(appKey,[AdType.banner,AdType.interstitial],testMode);
     } on PlatformException {
 
@@ -113,9 +113,13 @@ class _MyAppState extends State<MyApp> {
     setState(() {});
   }
 
+static const Color standardBlue = Color(0xFF7590BA);
+static const Color textColor = Color(0xFF293642);
+
  @override
  Widget build(BuildContext context) {
   return MaterialApp(
+    debugShowCheckedModeBanner: false,
     title: 'Title',
     home: Scaffold(
       body: Column(
@@ -124,45 +128,63 @@ class _MyAppState extends State<MyApp> {
         children: [
 
           Spacer(),
-          Center(
-            child:
-              Image.asset('./assets/appylar_logo.png',
-              height: 70,
-            ),
+          
+          Text("Appylar Flutter\nSample App", 
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 32, color: textColor)
           ),
-
-         SizedBox(height: 30),
-          Text("Appylar Sample App", 
-           style: TextStyle(fontSize: 22)),
+         
+          SizedBox(height: 30),
            
-          Center(
-            child: TextButton(
-              onPressed: () {
-                showBanner();
-              },
-              child: Text("SHOW BANNER",
-               style: TextStyle(color: Colors.blue)),
-            ),
+          Center( 
+            child: SizedBox(width: 200, 
+              child: TextButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(standardBlue),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                    )
+                  )
+                ),
+                onPressed: () {showBanner();},
+                child: Text("SHOW BANNER", style: TextStyle(color: Colors.white)),
+              ),
+            )
           ),
-          SizedBox(width: 100),
-          Center(
-            child: TextButton(
-              onPressed: () {
-                hideBanner();
-              },
-              child: Text("HIDE BANNER",
-               style: TextStyle(color: Colors.blue)),
-            ),
+          SizedBox(height: 7),
+          Center( 
+            child: SizedBox(width: 200, 
+              child: TextButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(standardBlue),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                    )
+                  )
+                ),
+                onPressed: () {hideBanner();},
+                child: Text("HIDE BANNER", style: TextStyle(color: Colors.white)),
+              ),
+            )
           ),
-          SizedBox(width: 100),
-          Center(
-            child: TextButton(
-              onPressed: () {
-                showInterstitial();
-              },
-              child: Text("SHOW INTERSTITIAL",
-               style: TextStyle(color: Colors.blue)),
-            ),
+          SizedBox(height: 7),
+          Center( 
+            child: SizedBox(width: 200, 
+              child: TextButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(standardBlue),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                    )
+                  )
+                ),
+                onPressed: () {showInterstitial();},
+                child: Text("SHOW INTERSTITIAL", style: TextStyle(color: Colors.white)),
+              ),
+            )
           ),
           Spacer(),
           Center(
