@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
     <application
-        android:label="flutter_appylar_sample_app"
+        android:label="Appylar Flutter Sample App"
         tools:replace="android:name"
         android:name="${applicationName}"
         android:icon="@mipmap/appylar_logo">
