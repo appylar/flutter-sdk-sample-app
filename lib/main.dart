@@ -29,6 +29,14 @@ class _MyAppState extends State<MyApp> {
     initialize();
   }
 
+  String statusText = "Initializing SDK, please wait...";
+
+    void updateStatusText(text) {
+    setState(() {
+      statusText = text;
+    });
+  }
+
   Future<void> appylarCallBackHandler(MethodCall call) async {
     final String method = call.method;
     dynamic argument = call.arguments;
@@ -36,41 +44,49 @@ class _MyAppState extends State<MyApp> {
       case "onInitialized":
         {
           print("flutter: onInitialized: $argument");
+          updateStatusText("SDK initialized.");
         }
         break;
       case "onError":
         {
           print("flutter: onError: $argument");
+          updateStatusText("Error: $argument");
         }
         break;
       case "onNoBanner":
         {
           print("flutter: onNoBanner: $argument");
+          updateStatusText("No more banners in the buffer,\nplease retry again after a minute.");
         }
         break;
       case "onBannerShown":
         {
           print("flutter: onBannerShown: $argument");
+          updateStatusText("");
         }
         break;
       case "onNoInterstitial":
         {
           print("flutter: onNoInterstitial: $argument");
+          updateStatusText("No more interstitials in the buffer,\nplease retry again after a minute.");
         }
         break;
       case "onInterstitialShown":
         {
           print("flutter: onInterstitialShown: $argument");
+          updateStatusText("");
         }
         break;
       case "onInterstitialClosed":
         {
           print("flutter: onInterstitialClosed: $argument");
+          updateStatusText("");
         }
         break;
       default:
         {
           print("flutter: no callback");
+          updateStatusText("");
         }
         break;
     }
@@ -186,13 +202,18 @@ static const Color textColor = Color(0xFF293642);
               ),
             )
           ),
+          SizedBox(height: 20),
+          Text(statusText, 
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 14, color: textColor)
+          ),
           Spacer(),
           Center(
             child: AppylarBannerView(
               onAppylarBannerViewCreated: _onAppylarBannerViewCreated,
             ),
           ),
-          SizedBox(height: 100),
+          SizedBox(height: 100),         
         ],
       ),
     ),
