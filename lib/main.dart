@@ -44,7 +44,7 @@ class _MyAppState extends State<MyApp> {
       case "onInitialized":
         {
           print("flutter: onInitialized: $argument");
-          updateStatusText("SDK initialized.");
+          updateStatusText("The SDK is initialized.");
         }
         break;
       case "onError":
