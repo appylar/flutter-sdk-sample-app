@@ -29,7 +29,7 @@ class _MyAppState extends State<MyApp> {
     initialize();
   }
 
-  String statusText = "Initializing SDK, please wait...";
+  String statusText = "Initializing the SDK, please wait...";
 
     void updateStatusText(text) {
     setState(() {
