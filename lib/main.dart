@@ -136,8 +136,9 @@ static const Color textColor = Color(0xFF293642);
  Widget build(BuildContext context) {
   return MaterialApp(
     debugShowCheckedModeBanner: false,
-    title: 'Title',
+    title: 'Appylar',
     home: Scaffold(
+      backgroundColor: Colors.white, 
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
