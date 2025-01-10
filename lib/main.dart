@@ -56,7 +56,7 @@ class _MyAppState extends State<MyApp> {
       case "onNoBanner":
         {
           print("flutter: onNoBanner: $argument");
-          updateStatusText("No more banners in the buffer,\nplease retry again after a minute.");
+          updateStatusText("No banners in the buffer.");
         }
         break;
       case "onBannerShown":
@@ -68,7 +68,7 @@ class _MyAppState extends State<MyApp> {
       case "onNoInterstitial":
         {
           print("flutter: onNoInterstitial: $argument");
-          updateStatusText("No more interstitials in the buffer,\nplease retry again after a minute.");
+          updateStatusText("No interstitials in the buffer.");
         }
         break;
       case "onInterstitialShown":
