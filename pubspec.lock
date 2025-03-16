@@ -114,10 +114,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_appylar
-      sha256: b41bfe32385e4c8ca26c0be75a305af3a53fd610e059caf16ae38cdfd216ac17
+      sha256: "03d75bd476fc28a04b41bf3b181cbb9dcb1674fa40ed7cb6aaa8e97e5ed50d30"
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.7"
+    version: "1.0.8"
   flutter_lints:
     dependency: "direct dev"
     description:
